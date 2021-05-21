@@ -1,8 +1,8 @@
 import 'dart:io';
-
+import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+
 import 'package:jitsi_meet/jitsi_meet.dart';
 
 void main() => runApp(MyApp());
@@ -46,7 +46,8 @@ class _MeetingState extends State<Meeting> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.red[400]),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.purple),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('TELEMEDICINA'),
@@ -186,7 +187,7 @@ class _MeetingState extends State<Meeting> {
                 "Join Meeting",
                 style: TextStyle(color: Colors.white),
               ),
-              style: ButtonStyle(backgroundColor: MaterialStateColor.resolveWith((states) => Colors.red[400])),
+              style: ButtonStyle(backgroundColor: MaterialStateColor.resolveWith((states) => Colors.red)),
             ),
           ),
           SizedBox(
